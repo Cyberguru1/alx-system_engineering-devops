@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
+#this script displays hours with its lingering minutes
 
 i=0
 while [ "$i" -lt 13 ]

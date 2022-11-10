@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
-
+#this script displays countries with their badluck numbers
 i=1
 while [ "$i" -lt 21 ]
     do
