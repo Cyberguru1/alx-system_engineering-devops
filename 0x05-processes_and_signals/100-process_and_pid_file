@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+patth="/var/run/myscript.pid"
+
+echo $$ > "$patth"
+
+term()
+{
+    echo "I hate the kill command"
+}
+
+term_int()
+{
+    echo "Y U no love me?!"
+}
+
+term_quit()
+{
+    rm "$patth"
+    exit
+}
+
+for((;;))
+{
+    echo "To infinity and beyond"
+    sleep 2
+    trap 'term && term_quit' SIGTERM
+    trap term_int SIGINT
+    trap term_quit SIGQUIT || SIGTERM
+}
