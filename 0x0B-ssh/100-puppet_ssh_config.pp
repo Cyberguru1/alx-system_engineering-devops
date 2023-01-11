@@ -1,10 +1,16 @@
 # using puppet to config ssh_config IdentityFile
-file {'ssh_config':
-    content => 'Include /etc/ssh/ssh_config.d/*.conf 
-Host *
-    PasswordAuthentication no
-    IdentityFile ~/.ssh/school
-    SendEnv LANG LC_*
-    HashKnownHosts yes
-    GSSAPIAuthentication yes',
+include stdlib
+
+file_line {'Turn off passwd auth':
+    ensure  => present,
+    path    => '/etc/ssh/ssh_config',
+    line    => '    PasswordAuthentication no'
+    replace => true,
+    }
+
+file_line {'Declare identity file':
+    ensure  => present,
+    path    => '/etc/ssh/ssh_config',
+    line    => '    IdentityFile ~/.ssh/school',
+    replace => true,
     }
