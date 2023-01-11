@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-ssh ubnutu@54.146.71.52
+# script to login to ssh server
+ssh ubnutu@54.146.71.52 -i ~/.ssh/school
