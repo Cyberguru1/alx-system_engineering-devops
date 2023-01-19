@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# fixing the Apache web server!!!!
+
+echo "ServerName localhost" >> /etc/apache2
+service apache2 start
