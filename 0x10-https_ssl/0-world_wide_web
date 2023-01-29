@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# a script that queries the supplied domain name for A records
+
+subdomains_all=( "www" "lb-01" "web-01" "web-02" )
+
+DIG () {
+    subd=$1
+    dom=$2
+
+    dig "$subd.$dom" | grep -A1 "ANSWER SECTION:"  | tail -1 | awk -v y="$subd" 'BEGIN { FS = " " } ; { print "The subdomain " y " is a " $4 " record and points to " $5 }'
+}
+
+if [ $# -eq 1 ]
+    then
+    domain="$1"
+    for m in "${subdomains_all[@]}"
+        do
+            DIG "$m" "$domain"
+        done
+
+elif [ $# -eq 2 ]
+    then
+        DIG "$2" "$1"
+
+fi
