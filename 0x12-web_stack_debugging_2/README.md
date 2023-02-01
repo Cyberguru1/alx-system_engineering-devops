@@ -5,7 +5,7 @@
 
 
 
-## 0. Run software as another user
+## 0. [Run software as another user](0-iamsomeoneelse)
 
 ![](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/eaeff07a715ff880b1ceb8e863a1d141a74a7f85.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230201T195106Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c53fd6ab65fc093227f22e0221aa76c81da340f6bc3317355237710b413fa9c0)
 
