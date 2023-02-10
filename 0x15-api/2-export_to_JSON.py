@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Using what you did in the task #0, extend your 
-Python script to export data in the json format.
-"""
+""" Python script to export data in the json format."""
 import requests
 import sys
 import json

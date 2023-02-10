@@ -4,8 +4,9 @@ Using what you did in the task #0, extend your
 Python script to exports to-do list information 
 of all employees to JSON format.
 """
-import requests
 import json
+import requests
+
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
