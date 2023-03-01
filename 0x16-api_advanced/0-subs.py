@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fucnto to get the subscribers on a given Reddit sub"""
+"""Function to get the subscribers on a given Reddit sub"""
 import requests
 
 def number_of_subscribers(subreddit):
@@ -11,5 +11,5 @@ def number_of_subscribers(subreddit):
     response = requests.get(url, headers=headers, allow_redirects=False)
     if response.status_code == 404:
         return 0
-    results = response.json().get('data')
+    results = response.json().get("data")
     return results.get("subscribers")
