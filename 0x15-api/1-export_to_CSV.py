@@ -9,7 +9,6 @@ if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
     user = requests.get(url + f"users/{user_id}").json()
     username = user.get("username")
-    print(username)
     todos = requests.get(url + "todos", params={"userId": user_id}).json()
     
     with open(f"{user_id}.csv", "w", newline="") as f:
