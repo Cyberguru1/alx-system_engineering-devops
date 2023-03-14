@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-"""Returns information about his/her list progress."""
+"""
+Returns information about his/her list progress.
+when quering data from the API
+"""
 import requests
 import sys
+
 
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
