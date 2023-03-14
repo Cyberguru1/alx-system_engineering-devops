@@ -1,19 +1,12 @@
 #!/usr/bin/python3
 """
 Returns information about his/her list progress.
-when quering data from the API
+when quering data from the API.
 """
 import requests
 import sys
 
-
 if __name__ == "__main__":
-    """
-        Desc:
-            performs query of information
-        Return:
-            returns completed task
-    """
     url = "https://jsonplaceholder.typicode.com/"
     user = requests.get(url + f"users/{sys.argv[1]}").json()
     todos = requests.get(url + "todos", params={"userId": sys.argv[1]}).json()
