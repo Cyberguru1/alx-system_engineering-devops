@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+# Reloads Gunicorn during downtime
+
+pgrep gunic* | awk '{ print $2 }' | xargs kill -HUP
